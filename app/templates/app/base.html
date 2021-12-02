@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Home{% endblock %}</title>
+    <meta name="description" content="A demo of a payment on Stripe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'app/main.css' %}" />
+    <script src="https://js.stripe.com/v3/"></script>
+    {% block scripts %}{% endblock %}
+  </head>
+  <body>
+    <div id="content">
+    {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>

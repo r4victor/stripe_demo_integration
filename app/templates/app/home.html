@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  {% if not subscription_data %}
+  <h2>You have no active subscription.</h2>
+  <h2>Subscribe to nothing for $10/mo</h2>
+  <a href="{% url 'checkout' %}">Subscribe</a>
+  {% else %}
+  <h2>You have a subscription.</h2>
+  <h2>Your subscription details: </h2>
+  <pre style='width: 600px; text-align: left;'>{{ subscription_data}}</pre>
+  {% endif %}
+{% endblock %}
